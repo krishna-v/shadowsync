@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<config>
+	<rsync>
+		<option>--rsh=ssh -i /cygdrive/c/Backup/key/backupkey</option>
+		<option>--rsync-path=sudo /usr/bin/rsync</option>
+		<option>--no-owner</option>
+		<option>--no-group</option>
+		<option>--no-perms</option>
+		<option>--no-acls</option>
+		<option>-v</option>
+		<option>--exclude='/**/AppData/Local/Temp/'</option>
+		<option>--exclude='/**/AppData/Local/Microsoft/WindowsApps/'</option>
+		<option>--exclude='LocalCache'</option>
+		<option>--exclude='hiberfil.sys'</option>
+		<option>--exclude='pagefile.sys'</option>
+		<option>--exclude='swapfile.sys'</option>
+		<option>--exclude='$Recycle.Bin'</option>
+		<option>--exclude='$Windows.~*'</option>
+		<option>--exclude='$WINDOWS.~*'</option>
+		<option>--one-file-system</option>
+		<dir>c:\cygwin64\bin</dir>
+		<server>192.168.1.2</server>
+		<user>backupuser</user>
+		<basepath>/backup</basepath>
+	</rsync>
+	<drives>
+		<drive name="C:\" alias="C"></drive>
+    <drive name="D:\" alias="D"></drive>
+	</drives>
+	<directories>
+		<dir name="C"></dir>
+    <dir name="D/Important"></dir>
+	</directories>
+</config>
